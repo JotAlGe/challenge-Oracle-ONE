@@ -52,6 +52,19 @@ body{
     display: grid;
     width: 100%;
 }
+
+.bottom svg{
+    width: 16px;
+    margin-right: .5%;
+}
+.bottom p{
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    color: #495057;
+    font-size: 12px;
+
+}
+
 .bottom--content{
     display: flex;
     justify-content: center;
@@ -219,5 +232,16 @@ body{
     }
     .main__text{
         width: 100%;
+    }
+}
+
+/* cell phone mode */
+@media (max-width: 500px){
+    .bottom--content{
+        flex-direction: column;
+    }
+    button{
+        width: 100%;
+        margin: 1% auto;
     }
 }

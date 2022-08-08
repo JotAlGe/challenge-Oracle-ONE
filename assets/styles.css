@@ -5,6 +5,7 @@
 }
 body{
     background-color: #F3F5FC;
+    overflowX: hidden;
 }
 .container {  
     width: 100vw;
@@ -49,11 +50,12 @@ body{
     grid-area: footer;
 
     display: grid;
-    place-content: center;
     width: 100%;
- }
- .bottom--content{
-    width: 100%;
+}
+.bottom--content{
+    display: flex;
+    justify-content: center;
+    min-width: 100%;
     height: 100%;
  }
  button{
@@ -63,7 +65,7 @@ body{
      padding: 24px;
      cursor: pointer;
      font-family: 'Inter', sans-serif;
-     /* margin: 1%; */
+     margin: 2%;
 }
     
 .bottom button:hover{
@@ -81,6 +83,7 @@ body{
 }
 
 .main { 
+    max-width: 100%;
     grid-area: main;
 
     display: grid;
@@ -88,6 +91,7 @@ body{
  }
  .main__text{
     width: 577px;
+    max-width: 100%;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -125,6 +129,8 @@ body{
 
  .right-side img{
     max-width: 100%;
+
+    animation: animatedImage 2s ease-in alternate infinite;
  }
  
 .right-side--text{
@@ -133,6 +139,8 @@ body{
     font-size: 24px;
     font-weight: 700;
     color: #343A40;
+
+    animation: animatedText 2s ease-in alternate infinite;
 }
 .right-side--text span{
     font-size: 16px;
@@ -153,4 +161,63 @@ body{
     width: 80%;
     border: 1px solid #0A3871;
     color: #0A3871;
+}
+
+/* image animation */
+@keyframes animatedImage {
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(-10px);
+    }
+}
+/* text animation */
+@keyframes animatedText {
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(5px);
+    }
+}
+
+/* tablet mode*/
+@media (max-width: 768px){
+
+    .container{
+        max-width: 100%;
+        height: auto;
+        max-height: auto;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .left{
+        padding: 1%;
+        min-height: 70vh;
+    }
+    .right-side{
+        width: 90%;
+        min-height: 25vh;   
+        height: auto;
+    }
+    .right-side img{
+        display: none;
+    }
+    .right-side--text{
+        animation: none;
+    }
+    .bottom--content{
+        width: 100%;
+        align-items: flex-end;
+        max-width: 100%;
+    }
+
+    .main{
+        padding: 5%;
+    }
+    .main__text{
+        width: 100%;
+    }
 }

@@ -138,6 +138,7 @@ body{
     padding: 2%;
 
     position: relative;
+    overflow-y: auto;
  }
 
  .right-side img{
@@ -178,11 +179,13 @@ body{
 .text_content{
     word-wrap: break-word;
     overflow-x: hidden;
+    overflow-y: auto;
     font-family: 'Inter', sans-serif;
     text-align: center;
     font-size: 24px;
     font-weight: 700;
     color: #0A3871;
+    padding: 1%;
 }
 /* image animation */
 @keyframes animatedImage {

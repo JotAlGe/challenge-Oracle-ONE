@@ -5,7 +5,7 @@
 }
 body{
     background-color: #F3F5FC;
-    overflowX: hidden;
+    overflow-x: hidden;
 }
 .container {  
     width: 100vw;
@@ -175,7 +175,15 @@ body{
     border: 1px solid #0A3871;
     color: #0A3871;
 }
-
+.text_content{
+    word-wrap: break-word;
+    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: #0A3871;
+}
 /* image animation */
 @keyframes animatedImage {
     from{

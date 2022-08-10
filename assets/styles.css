@@ -176,6 +176,11 @@ body{
     border: 1px solid #0A3871;
     color: #0A3871;
 }
+
+.bottom--content__copy svg{
+    height: 15px;
+    width: 15px;
+}
 .text_content{
     word-wrap: break-word;
     overflow-x: hidden;

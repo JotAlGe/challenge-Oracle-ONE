@@ -4,10 +4,17 @@ const img = document.getElementById('img_munieco')
 const p = document.getElementById('p_show_hidden')
 const input = document.getElementById('textarea')
 const div = document.getElementById('right-side')
+const pEncrypt = document.querySelector('.text_content')
+const copyButton  = document.querySelector('#copy')
 
 // hidde image
 function hiddeElement(element){
     element.style.display = 'none'
+}
+
+//show elemen
+function showElement(elemen, disp){
+    elemen.style.display = disp
 }
 // encrypt
 function encrypt(str){
@@ -45,8 +52,10 @@ button.addEventListener('click', function(){
     if(input.value != ""){
         hiddeElement(img)
         hiddeElement(p)
+        showElement(copyButton, 'block')
         
-        div.innerHTML = `<p class="text_content"> ${encrypt(input.value)}</p>`
+        pEncrypt.innerHTML = encrypt(input.value)
         input.value = ""  
     }
+
 })

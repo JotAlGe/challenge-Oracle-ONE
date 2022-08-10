@@ -170,17 +170,20 @@ body{
     display: grid;
     justify-items: center;
 }
-.bottom--content__copy button{
-    display: none;
-    width: 80%;
-    border: 1px solid #0A3871;
-    color: #0A3871;
-}
+
 
 .bottom--content__copy svg{
-    height: 15px;
-    width: 15px;
+    display: none;
+    height: 50%;
+    width: 30%;
+    cursor: pointer;
+    fill: #0A3871;
 }
+    
+.bottom--content__copy svg:hover{
+    opacity: .8;
+}
+
 .text_content{
     word-wrap: break-word;
     overflow-x: hidden;
@@ -191,6 +194,10 @@ body{
     font-weight: 700;
     color: #0A3871;
     padding: 1%;
+}
+
+.animation{
+    animation: svg .3s ease-in-out alternate;
 }
 /* image animation */
 @keyframes animatedImage {
@@ -208,6 +215,16 @@ body{
     }
     to{
         transform: translateY(5px);
+    }
+}
+
+/* svg animation */
+@keyframes svg {
+    from{
+        transform: scale(2.05);
+    }
+    to{
+        transform: scale(1) rotateZ(5deg);
     }
 }
 

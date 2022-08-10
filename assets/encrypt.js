@@ -55,7 +55,7 @@ button.addEventListener('click', function(){
         showElement(copyButton, 'block')
         
         pEncrypt.innerHTML = encrypt(input.value)
-        input.value = ""  
+        input.value = ""
     }
 
 })

@@ -7,15 +7,12 @@ const div = document.getElementById('right-side')
 const pEncrypt = document.querySelector('.text_content')
 const copyButton  = document.querySelector('#copy')
 
-// hidde image
-function hiddeElement(element){
-    element.style.display = 'none'
-}
 
 //show elemen
-function showElement(elemen, disp){
+function setElementDisplay(elemen, disp){
     elemen.style.display = disp
 }
+
 // encrypt
 function encrypt(str){
     let lower = str.toLowerCase()
@@ -50,9 +47,9 @@ function encrypt(str){
 button.addEventListener('click', function(){
     
     if(input.value != ""){
-        hiddeElement(img)
-        hiddeElement(p)
-        showElement(copyButton, 'block')
+        setElementDisplay(img, 'none')
+        setElementDisplay(p, 'none')
+        setElementDisplay(copyButton, 'block')
         
         pEncrypt.innerHTML = encrypt(input.value)
         input.value = ""

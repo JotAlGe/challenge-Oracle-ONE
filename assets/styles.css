@@ -142,6 +142,18 @@ body{
     overflow-x: hidden;
  }
 
+ .encryp_decryp{
+    display: none;
+    position: absolute;
+	top: 5%;
+	text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: #0A3871;
+	width: 100%;
+ }
+
  .right-side img{
     max-width: 100%;
 
@@ -180,11 +192,27 @@ body{
     cursor: pointer;
     fill: #0A3871;
 }
-    
+.tooltiptext {
+  display: none;
+  margin: auto;
+  width: 100%;
+  color: rgba(10, 56, 113, .8);
+  text-align: center;
+  
+  position: absolute;
+  bottom: 0;
+  font-size: 1.2rem;
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+  z-index: 1;
+}
 .bottom--content__copy svg:hover{
     opacity: .8;
 }
-
+svg:hover + .tooltiptext{
+    display: inline;
+}
+    
 .text_content{
     word-wrap: break-word;
     overflow-x: hidden;
@@ -196,6 +224,7 @@ body{
     color: #0A3871;
     padding: 1%;
 }
+
 
 .animation{
     animation: svg .3s ease-in-out alternate;
@@ -265,6 +294,8 @@ body{
         
         max-width: 100%;
     }
+
+    
     .bottom--content__copy svg{
         width: 50px;
         height: 50px;

@@ -6,7 +6,7 @@ const input = document.getElementById('textarea')
 const div = document.getElementById('right-side')
 const pEncrypt = document.querySelector('.text_content')
 const copyButton  = document.querySelector('#copy')
-
+const title = document.querySelector('.encryp_decryp')
 
 //show elemen
 function setElementDisplay(elemen, disp){
@@ -50,6 +50,9 @@ button.addEventListener('click', function(){
         setElementDisplay(img, 'none')
         setElementDisplay(p, 'none')
         setElementDisplay(copyButton, 'block')
+        setElementDisplay(title, 'block')
+        
+        title.textContent = '¡Encriptado!'
         
         pEncrypt.innerHTML = encrypt(input.value)
         input.value = ""

@@ -4,6 +4,7 @@ const textEncrypt = document.querySelector('.text_content')
 const image = document.getElementById('img_munieco')
 const subtitle = document.getElementById('p_show_hidden')
 const buttonCopy = document.getElementById('copy')
+const tit = document.querySelector('.encryp_decryp')
 
 //show elemen
 function setElementDisplay(elemen, disp){
@@ -40,6 +41,8 @@ decryptButton.addEventListener('click', function (){
     setElementDisplay(image, 'none')
     setElementDisplay(subtitle, 'none')
     setElementDisplay(buttonCopy, 'none')
+
+    tit.textContent = '¡Desencriptado!'
     
     textEncrypt.innerHTML = decrypt(inputText.value)
     inputText.value = ""
